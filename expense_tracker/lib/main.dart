@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/widgets/expenses.dart';
+// import 'package:flutter/services.dart';
 
 void main() {
+  //locking the Device's Orientation..
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((value) {
   runApp(const MyApp());
+  // });
 }
 
 var kColorScheme =
@@ -61,7 +68,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 16),
             ),
       ),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: Expenses(
         myExpenses: const [],
       ),
