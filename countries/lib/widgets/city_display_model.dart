@@ -11,7 +11,11 @@ class CityDisplayModel extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Card(elevation: 10, child: Image.network(country.countryImageLink)),
+          Card(
+              elevation: 10,
+              child: Hero(
+                  tag: country.countryName,
+                  child: Image.network(country.countryImageLink))),
           const SizedBox(
             height: 20,
           ),

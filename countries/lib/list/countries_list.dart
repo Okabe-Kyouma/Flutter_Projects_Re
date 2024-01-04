@@ -1,7 +1,31 @@
 import 'package:countries/models/best_places_to_visit.dart';
 import 'package:countries/models/countries_list_model.dart';
+import 'package:flutter/material.dart';
 
 List<CountryListModel> favoritesList = [];
+
+ List<String> countryNames = [
+      "Asia",
+      "North America",
+      "South America",
+      "Africa",
+      "Europe",
+      "Australia",
+      "Antarctica",
+      "Local"
+    ];
+
+
+ List<List<Color>> colors = [
+      [Colors.pink, Colors.pink.withOpacity(0.5)],
+      [Colors.deepPurpleAccent, Colors.deepPurpleAccent.withOpacity(0.5)],
+      [Colors.deepOrangeAccent, Colors.deepOrangeAccent.withOpacity(0.5)],
+      [Colors.green, Colors.green.withOpacity(0.5)],
+      [Colors.blue, Colors.blue.withOpacity(0.5)],
+      [Colors.yellow, Colors.yellow.withOpacity(0.5)],
+      [Colors.redAccent, Colors.redAccent.withOpacity(0.5)],
+      [Colors.cyanAccent, Colors.cyanAccent.withOpacity(0.5)],
+    ];
 
 const List<CountryListModel> myFinalcountriesList = [
   //Asian countries

@@ -1,4 +1,4 @@
-import 'package:countries/models/city_display_model.dart';
+import 'package:countries/widgets/city_display_model.dart';
 import 'package:countries/models/countries_list_model.dart';
 import 'package:flutter/material.dart';
 
@@ -37,8 +37,9 @@ class _CityDisplayState extends State<CityDisplay> {
         snackBarText = 'Removed From Favorites';
         favoritesList.remove(widget.country);
       });
-      widget.updatedList(favoritesList);
     }
+
+     widget.updatedList(favoritesList);
 
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(

@@ -1,5 +1,5 @@
-import 'package:countries/models/countries_list.dart';
-import 'package:countries/models/city_display.dart';
+import 'package:countries/list/countries_list.dart';
+import 'package:countries/widgets/city_display.dart';
 import 'package:countries/models/countries_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -24,9 +24,12 @@ class CountryDisplay extends StatelessWidget {
         height: 300,
         child: Stack(
           children: [
-            FadeInImage(
-                placeholder: MemoryImage(kTransparentImage),
-                image: NetworkImage(country.countryImageLink)),
+            Hero(
+              tag:country.countryName ,
+              child: FadeInImage(
+                  placeholder: MemoryImage(kTransparentImage),
+                  image: NetworkImage(country.countryImageLink)),
+            ),
             Positioned(
               left: 0,
               right: 0,

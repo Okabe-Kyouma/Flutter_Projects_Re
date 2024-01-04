@@ -1,4 +1,4 @@
-import 'package:countries/models/grid/grid.dart';
+import 'package:countries/widgets/grid.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme2,
-      home: const Grid(),
+      home: Grid(
+        favoritesList: const [],
+      ),
     );
   }
 }

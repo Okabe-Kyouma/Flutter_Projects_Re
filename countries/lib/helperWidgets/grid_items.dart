@@ -30,12 +30,15 @@ class GridItems extends StatelessWidget {
                   end: Alignment.bottomRight),
             ),
             child: Center(
-              child: Text(
-                countryName,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge!
-                    .copyWith(fontSize: 18, color: Colors.white),
+              child: Hero(
+                tag: countryName,
+                child: Text(
+                  countryName,
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge!
+                      .copyWith(fontSize: 18, color: Colors.white),
+                ),
               ),
             )),
       ),

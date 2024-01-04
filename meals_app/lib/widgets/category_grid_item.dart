@@ -7,12 +7,10 @@ import 'package:meals_app/screens/meals.dart';
 class CategoryGidItem extends StatelessWidget {
   const CategoryGidItem(
       {required this.availableMeals,
-      required this.onToggleFavorite,
       required this.category,
       super.key});
 
   final Category category;
-  final void Function(Meal meal) onToggleFavorite;
   final List<Meal> availableMeals;
 
   @override
@@ -25,7 +23,7 @@ class CategoryGidItem extends StatelessWidget {
           MaterialPageRoute(
             builder: (ctx) => MealsScreen(
               // onToggleFavorite: onToggleFavorite,
-              onToggleFavorite: onToggleFavorite,
+            
               title: category.title,
               meals: listOfMeals
                   .where(
